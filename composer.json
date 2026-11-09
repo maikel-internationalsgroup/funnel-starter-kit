@@ -1,0 +1,17 @@
+{
+  "name": "internationalsgroup/funnel-starter-kit",
+  "description": "PHP starter kit for marketing funnels: i18n, forms, mail, integrations and tracking.",
+  "type": "project",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.1",
+    "phpmailer/phpmailer": "^6.9"
+  },
+  "suggest": {
+    "ext-curl": "Used for webhook, HubSpot and Blinqx integrations (falls back to streams)."
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}

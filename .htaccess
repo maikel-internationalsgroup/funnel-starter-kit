@@ -1,0 +1,10 @@
+# Fallback for hosting where the document root CANNOT be set to /public.
+# Preferred: ask the IT partner to point the (sub)domain to the public/ folder,
+# then this file is never used.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(\.env|\.git|config|src|templates|lang|storage|tools|docs|vendor|composer\.(json|lock))(/|$) - [F,L]
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

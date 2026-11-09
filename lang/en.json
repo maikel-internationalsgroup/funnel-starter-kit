@@ -1,0 +1,116 @@
+{
+  "site": {
+    "brand": "Your Company",
+    "title": "Request information, no strings attached | Your Company",
+    "description": "Find out in two minutes what we can do for you. Request information without obligation."
+  },
+  "common": {
+    "language": "Language",
+    "privacy": "Privacy statement",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "pages": {
+    "thank-you": {
+      "title": "Thank you for your request | Your Company"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Free advice",
+      "title": "A personal proposal within 24 hours",
+      "subtitle": "Fill in the form and one of our specialists will contact you to discuss your situation."
+    },
+    "benefits": [
+      "Personal advice from a specialist",
+      "Response within one business day",
+      "No obligation"
+    ],
+    "form": {
+      "title": "Request information",
+      "intro": "It takes less than a minute."
+    },
+    "steps": {
+      "title": "How it works",
+      "cta": "Start your request",
+      "items": [
+        { "title": "Fill in the form", "text": "Tell us briefly what you are looking for." },
+        { "title": "We get in touch", "text": "We call or email you within one business day." },
+        { "title": "You receive a proposal", "text": "Fully tailored to your situation." }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        { "q": "Am I committing to anything?", "a": "No. A request is completely free of obligation." },
+        { "q": "What happens to my data?", "a": "We only use your details to contact you about your request." },
+        { "q": "How soon will I hear from you?", "a": "A specialist will contact you within one business day." }
+      ]
+    }
+  },
+  "thank_you": {
+    "title": "Thank you for your request!",
+    "text": "We have received your details. You will also receive a confirmation by email.",
+    "next": [
+      "A specialist reviews your request",
+      "We will contact you within one business day"
+    ],
+    "back": "Back to the homepage"
+  },
+  "not_found": {
+    "title": "Page not found",
+    "text": "This page does not exist (anymore).",
+    "back": "Go to the homepage"
+  },
+  "forms": {
+    "optional": "(optional)",
+    "choose": "Please choose",
+    "sending": "Sending…",
+    "errors": {
+      "required": "This field is required.",
+      "email": "Please enter a valid email address.",
+      "phone": "Please enter a valid phone number.",
+      "number": "Please enter a number.",
+      "date": "Please enter a valid date.",
+      "invalid_option": "Please choose one of the options.",
+      "invalid": "This value is not valid.",
+      "too_long": "This text is too long.",
+      "expired": "This page has expired. Please refresh and try again.",
+      "rate_limited": "Too many attempts. Please try again in a few minutes.",
+      "unknown_form": "Unknown form.",
+      "network": "Connection problem. Please try again.",
+      "check_fields": "Please check the highlighted fields."
+    },
+    "lead": {
+      "submit": "Send request",
+      "note": "Your details are treated confidentially.",
+      "fields": {
+        "first_name": { "label": "First name", "placeholder": "John" },
+        "last_name": { "label": "Last name", "placeholder": "Smith" },
+        "email": { "label": "Email address", "placeholder": "john@example.com" },
+        "phone": { "label": "Phone number", "placeholder": "+31 6 12345678" },
+        "interest": {
+          "label": "What are you interested in?",
+          "options": { "product_a": "Product A", "product_b": "Product B", "other": "Something else" }
+        },
+        "message": { "label": "Details", "placeholder": "Briefly tell us what you are looking for" },
+        "consent": { "label": "I agree to the <a href=\"{privacy_url}\" target=\"_blank\" rel=\"noopener\">privacy statement</a>." }
+      }
+    }
+  },
+  "emails": {
+    "notification": {
+      "subject": "New request: {name} ({funnel})",
+      "heading": "New request via the funnel",
+      "attribution": "Source (UTM / campaign)"
+    },
+    "confirmation": {
+      "subject": "Thank you for your request, {name}",
+      "heading": "Thank you, {name}!",
+      "body": "We have received your request. One of our specialists will contact you within one business day.",
+      "closing": "Any questions in the meantime? Simply reply to this email.",
+      "signature": "Kind regards, Team Your Company",
+      "footer": "You are receiving this email because you submitted a request on our website."
+    }
+  }
+}

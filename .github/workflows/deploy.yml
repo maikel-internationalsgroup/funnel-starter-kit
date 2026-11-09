@@ -1,0 +1,43 @@
+name: Deploy (SFTP)
+
+# Manual deploy from the GitHub "Actions" tab. Optional: deploying from your
+# own machine with ./tools/deploy.sh does exactly the same.
+#
+# Repository secrets needed (Settings → Secrets and variables → Actions):
+#   SFTP_HOST, SFTP_PORT, SFTP_USER, SFTP_PASS, SFTP_REMOTE_DIR
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (show changes only)'
+        type: boolean
+        default: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          tools: composer
+
+      - name: Install lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+
+      - name: Write .env.deploy
+        run: |
+          cat > .env.deploy <<EOF
+          SFTP_HOST=${{ secrets.SFTP_HOST }}
+          SFTP_PORT=${{ secrets.SFTP_PORT }}
+          SFTP_USER=${{ secrets.SFTP_USER }}
+          SFTP_PASS=${{ secrets.SFTP_PASS }}
+          SFTP_REMOTE_DIR=${{ secrets.SFTP_REMOTE_DIR }}
+          EOF
+
+      - name: Deploy
+        run: ./tools/deploy.sh ${{ inputs.dry_run && '--dry-run' || '' }}

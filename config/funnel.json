@@ -1,0 +1,119 @@
+{
+  "funnel": {
+    "name": "Example Funnel",
+    "slug": "example-funnel",
+    "owner": "Marketing",
+    "version": "0.1.0"
+  },
+
+  "site": {
+    "base_url": "https://example.yourcompany.nl",
+    "base_path": "",
+    "brand_color": "#1f5eff",
+    "logo": "assets/img/logo.svg",
+    "privacy_url": {
+      "nl": "https://www.yourcompany.nl/privacy",
+      "en": "https://www.yourcompany.nl/en/privacy"
+    },
+    "noindex": false
+  },
+
+  "i18n": {
+    "languages": ["nl", "en"],
+    "default": "nl",
+    "detect_browser_language": true
+  },
+
+  "pages": {
+    "home": {
+      "template": "home",
+      "slug": "",
+      "funnel_step": 1
+    },
+    "thank-you": {
+      "template": "thank-you",
+      "slug": { "nl": "bedankt", "en": "thank-you" },
+      "funnel_step": 2,
+      "noindex": true
+    }
+  },
+
+  "forms": {
+    "lead": {
+      "page": "home",
+      "success_page": "thank-you",
+      "fields": [
+        { "name": "first_name", "type": "text", "required": true, "max": 100, "autocomplete": "given-name" },
+        { "name": "last_name", "type": "text", "required": true, "max": 100, "autocomplete": "family-name" },
+        { "name": "email", "type": "email", "required": true, "autocomplete": "email" },
+        { "name": "phone", "type": "tel", "required": false, "autocomplete": "tel" },
+        { "name": "interest", "type": "select", "required": true, "options": ["product_a", "product_b", "other"] },
+        { "name": "message", "type": "textarea", "required": false, "max": 2000 },
+        { "name": "consent", "type": "checkbox", "required": true }
+      ],
+      "integrations": ["mailbox"],
+      "confirmation_email": true
+    }
+  },
+
+  "integrations": {
+    "mailbox": {
+      "to": [],
+      "subject_prefix": "[Funnel]"
+    },
+    "webhook": {
+      "url_env": "WEBHOOK_URL",
+      "secret_env": "WEBHOOK_SECRET"
+    },
+    "hubspot": {
+      "portal_id_env": "HUBSPOT_PORTAL_ID",
+      "form_guid_env": "HUBSPOT_FORM_GUID",
+      "token_env": "HUBSPOT_TOKEN",
+      "field_map": {
+        "first_name": "firstname",
+        "last_name": "lastname",
+        "email": "email",
+        "phone": "phone",
+        "message": "message",
+        "utm_source": "utm_source",
+        "utm_medium": "utm_medium",
+        "utm_campaign": "utm_campaign"
+      }
+    },
+    "blinqx": {
+      "endpoint_env": "BLINQX_ENDPOINT",
+      "token_env": "BLINQX_TOKEN",
+      "field_map": {
+        "first_name": "firstName",
+        "last_name": "lastName",
+        "email": "email",
+        "phone": "phone",
+        "message": "note"
+      }
+    }
+  },
+
+  "mail": {
+    "from_name": "Your Company",
+    "internal_language": "nl"
+  },
+
+  "tracking": {
+    "gtm_id": "GTM-XXXXXXX",
+    "attribution_storage": "session",
+    "attribution_params": [
+      "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "utm_id",
+      "gclid", "gbraid", "wbraid", "fbclid", "msclkid", "ttclid", "li_fat_id"
+    ]
+  },
+
+  "security": {
+    "min_fill_seconds": 3,
+    "rate_limit": { "max": 5, "per_minutes": 10 }
+  },
+
+  "storage": {
+    "store_submissions": true,
+    "keep_days": 90
+  }
+}

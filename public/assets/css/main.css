@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Funnel starter kit — base styles
+   Brand colour comes from config/funnel.json -> site.brand_color (sets --brand).
+   Adjust the tokens below per funnel; keep component classes stable so
+   converted designs can reuse them.
+   ========================================================================== */
+
+:root {
+  --brand: #1f5eff;
+  --brand-contrast: #ffffff;
+  --text: #1d2433;
+  --muted: #5b6475;
+  --bg: #ffffff;
+  --bg-alt: #f5f7fa;
+  --border: #dfe3ea;
+  --error: #c62828;
+  --success: #1b8a4b;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(29, 36, 51, .08);
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --container: 1120px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font); color: var(--text); background: var(--bg); line-height: 1.6; font-size: 16px; }
+img { max-width: 100%; height: auto; }
+a { color: var(--brand); }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
+h1 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.02em; }
+h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); }
+h3 { font-size: 1.15rem; }
+p { margin: 0 0 1em; }
+
+.container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 20px; }
+.narrow { max-width: 760px; }
+.center { text-align: center; }
+.muted { color: var(--muted); }
+.lead { font-size: 1.15rem; color: var(--muted); }
+.eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; font-weight: 700; color: var(--brand); }
+
+/* Header / footer ------------------------------------------------------- */
+.site-header { border-bottom: 1px solid var(--border); background: var(--bg); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 64px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; }
+.brand-mark { width: 24px; height: 24px; border-radius: 6px; background: var(--brand); }
+.lang-switch { display: flex; gap: 4px; }
+.lang-switch a { padding: 4px 8px; border-radius: 6px; font-size: .85rem; font-weight: 600; color: var(--muted); text-decoration: none; }
+.lang-switch a[aria-current="true"] { background: var(--bg-alt); color: var(--text); }
+.site-footer { border-top: 1px solid var(--border); padding: 24px 0; color: var(--muted); font-size: .9rem; }
+.footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.footer-inner p { margin: 0; }
+
+/* Sections -------------------------------------------------------------- */
+.hero { padding: 56px 0; background: linear-gradient(180deg, var(--bg-alt), var(--bg)); }
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: start; }
+.section { padding: 64px 0; }
+.section-alt { background: var(--bg-alt); }
+.section-title { text-align: center; margin-bottom: 32px; }
+
+.card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+.form-card h2 { margin-bottom: .25em; }
+
+.checklist { list-style: none; padding: 0; margin: 24px 0 0; }
+.checklist li { position: relative; padding-left: 32px; margin-bottom: 10px; font-weight: 500; }
+.checklist li::before { content: "✓"; position: absolute; left: 0; top: 2px; width: 20px; height: 20px; border-radius: 50%; background: var(--brand); color: var(--brand-contrast); font-size: .75rem; font-weight: 700; display: grid; place-items: center; }
+
+.steps { list-style: none; padding: 0; margin: 0 0 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.step-no { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--brand); color: var(--brand-contrast); font-weight: 700; margin-bottom: 12px; }
+
+.faq { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 12px; }
+.faq summary { cursor: pointer; font-weight: 600; }
+.faq p { margin: 12px 0 0; color: var(--muted); }
+
+.thank-you .success-icon { display: inline-grid; place-items: center; width: 72px; height: 72px; border-radius: 50%; background: color-mix(in srgb, var(--success) 12%, transparent); color: var(--success); margin-bottom: 20px; }
+.next-steps { list-style: none; padding: 0; margin: 0 0 32px; color: var(--muted); }
+
+/* Buttons --------------------------------------------------------------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 24px; border-radius: 10px; border: 2px solid transparent; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; transition: transform .1s ease, filter .15s ease; }
+.btn:hover { filter: brightness(1.08); }
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--brand); color: var(--brand-contrast); }
+.btn-secondary { background: transparent; color: var(--brand); border-color: var(--brand); }
+.btn-block { width: 100%; }
+.btn[disabled] { opacity: .7; cursor: progress; }
+
+/* Forms ----------------------------------------------------------------- */
+.funnel-form { margin-top: 16px; }
+.field { margin-bottom: 16px; }
+.field label { display: block; font-weight: 600; font-size: .95rem; margin-bottom: 6px; }
+.optional { font-weight: 400; color: var(--muted); font-size: .85em; }
+.field input:not([type=checkbox]):not([type=radio]), .field select, .field textarea {
+  width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px; font: inherit; color: var(--text); background: #fff;
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline: 3px solid color-mix(in srgb, var(--brand) 25%, transparent); border-color: var(--brand); }
+.field [aria-invalid="true"] { border-color: var(--error) !important; }
+.check { display: flex !important; gap: 10px; align-items: flex-start; font-weight: 400 !important; }
+.check input { margin-top: 5px; width: 18px; height: 18px; accent-color: var(--brand); }
+.help { font-size: .85rem; color: var(--muted); margin: 4px 0 0; }
+.error { font-size: .85rem; color: var(--error); margin: 4px 0 0; }
+.form-alert { background: color-mix(in srgb, var(--error) 8%, #fff); color: var(--error); border-radius: 8px; padding: 10px 14px; margin-bottom: 16px; font-size: .9rem; }
+.form-note { font-size: .8rem; color: var(--muted); text-align: center; margin: 12px 0 0; }
+.hp { position: absolute !important; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+/* Responsive ------------------------------------------------------------ */
+@media (max-width: 860px) {
+  .hero { padding: 32px 0; }
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .steps { grid-template-columns: 1fr; }
+  .section { padding: 44px 0; }
+}

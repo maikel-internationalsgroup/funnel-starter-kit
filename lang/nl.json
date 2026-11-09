@@ -1,0 +1,116 @@
+{
+  "site": {
+    "brand": "Jouw Bedrijf",
+    "title": "Vraag vrijblijvend informatie aan | Jouw Bedrijf",
+    "description": "Ontdek in twee minuten wat wij voor je kunnen betekenen. Vraag vrijblijvend informatie aan."
+  },
+  "common": {
+    "language": "Taal",
+    "privacy": "Privacyverklaring",
+    "yes": "Ja",
+    "no": "Nee"
+  },
+  "pages": {
+    "thank-you": {
+      "title": "Bedankt voor je aanvraag | Jouw Bedrijf"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Vrijblijvend advies",
+      "title": "Binnen 24 uur een persoonlijk voorstel",
+      "subtitle": "Vul het formulier in en een van onze specialisten neemt contact met je op om je situatie te bespreken."
+    },
+    "benefits": [
+      "Persoonlijk advies van een specialist",
+      "Reactie binnen één werkdag",
+      "Geheel vrijblijvend"
+    ],
+    "form": {
+      "title": "Vraag informatie aan",
+      "intro": "Het invullen duurt minder dan een minuut."
+    },
+    "steps": {
+      "title": "Zo werkt het",
+      "cta": "Start je aanvraag",
+      "items": [
+        { "title": "Vul het formulier in", "text": "Vertel ons kort waar je naar op zoek bent." },
+        { "title": "Wij nemen contact op", "text": "Binnen één werkdag bellen of mailen we je." },
+        { "title": "Je ontvangt een voorstel", "text": "Helemaal afgestemd op jouw situatie." }
+      ]
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "items": [
+        { "q": "Zit ik ergens aan vast?", "a": "Nee. Een aanvraag is volledig vrijblijvend." },
+        { "q": "Wat gebeurt er met mijn gegevens?", "a": "We gebruiken je gegevens alleen om contact met je op te nemen over je aanvraag." },
+        { "q": "Hoe snel hoor ik iets?", "a": "Binnen één werkdag neemt een specialist contact met je op." }
+      ]
+    }
+  },
+  "thank_you": {
+    "title": "Bedankt voor je aanvraag!",
+    "text": "We hebben je gegevens goed ontvangen. Je ontvangt ook een bevestiging per e-mail.",
+    "next": [
+      "Een specialist bekijkt je aanvraag",
+      "Binnen één werkdag nemen we contact met je op"
+    ],
+    "back": "Terug naar de homepage"
+  },
+  "not_found": {
+    "title": "Pagina niet gevonden",
+    "text": "Deze pagina bestaat niet (meer).",
+    "back": "Naar de homepage"
+  },
+  "forms": {
+    "optional": "(optioneel)",
+    "choose": "Maak een keuze",
+    "sending": "Bezig met verzenden…",
+    "errors": {
+      "required": "Dit veld is verplicht.",
+      "email": "Vul een geldig e-mailadres in.",
+      "phone": "Vul een geldig telefoonnummer in.",
+      "number": "Vul een getal in.",
+      "date": "Vul een geldige datum in.",
+      "invalid_option": "Kies een van de opties.",
+      "invalid": "Deze waarde is ongeldig.",
+      "too_long": "Deze tekst is te lang.",
+      "expired": "De pagina is verlopen. Vernieuw de pagina en probeer het opnieuw.",
+      "rate_limited": "Te veel pogingen. Probeer het over een paar minuten opnieuw.",
+      "unknown_form": "Onbekend formulier.",
+      "network": "Er ging iets mis met de verbinding. Probeer het opnieuw.",
+      "check_fields": "Controleer de gemarkeerde velden."
+    },
+    "lead": {
+      "submit": "Verstuur aanvraag",
+      "note": "Je gegevens worden vertrouwelijk behandeld.",
+      "fields": {
+        "first_name": { "label": "Voornaam", "placeholder": "Jan" },
+        "last_name": { "label": "Achternaam", "placeholder": "de Vries" },
+        "email": { "label": "E-mailadres", "placeholder": "jan@voorbeeld.nl" },
+        "phone": { "label": "Telefoonnummer", "placeholder": "06 12345678" },
+        "interest": {
+          "label": "Waar ben je in geïnteresseerd?",
+          "options": { "product_a": "Product A", "product_b": "Product B", "other": "Iets anders" }
+        },
+        "message": { "label": "Toelichting", "placeholder": "Vertel kort waar je naar op zoek bent" },
+        "consent": { "label": "Ik ga akkoord met de <a href=\"{privacy_url}\" target=\"_blank\" rel=\"noopener\">privacyverklaring</a>." }
+      }
+    }
+  },
+  "emails": {
+    "notification": {
+      "subject": "Nieuwe aanvraag: {name} ({funnel})",
+      "heading": "Nieuwe aanvraag via de funnel",
+      "attribution": "Herkomst (UTM / campagne)"
+    },
+    "confirmation": {
+      "subject": "Bedankt voor je aanvraag, {name}",
+      "heading": "Bedankt, {name}!",
+      "body": "We hebben je aanvraag goed ontvangen. Een van onze specialisten neemt binnen één werkdag contact met je op.",
+      "closing": "Heb je in de tussentijd vragen? Beantwoord dan gewoon deze e-mail.",
+      "signature": "Met vriendelijke groet, Team Jouw Bedrijf",
+      "footer": "Je ontvangt deze e-mail omdat je een aanvraag hebt gedaan via onze website."
+    }
+  }
+}
